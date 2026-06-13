@@ -1,0 +1,11 @@
+const fs = require('fs');
+const html = fs.readFileSync('temp_html.txt', 'utf16le');
+console.log('HTML Length:', html.length);
+if (html.includes('tsparticles')) console.log('Found tsparticles');
+if (html.includes('three')) console.log('Found three.js');
+if (html.includes('vanta')) console.log('Found vanta');
+if (html.includes('framer-motion')) console.log('Found framer-motion');
+if (html.includes('particles')) console.log('Found particles');
+if (html.includes('canvas')) console.log('Found canvas');
+const scripts = html.match(/<script.*?src=[\"'](.*?)[\"']/g);
+console.log('Scripts:', scripts);
