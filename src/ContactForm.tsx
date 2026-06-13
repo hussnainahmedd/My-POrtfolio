@@ -46,7 +46,7 @@ export default function ContactForm() {
       ) : (
         <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
           {/* Web3Forms Access Key - Replace this with your actual key */}
-          <input type="hidden" name="access_key" value="03b6e6ea-3c37-4da4-a109-0a896ea93c86 " />
+          <input type="hidden" name="access_key" value="03b6e6ea-3c37-4da4-a109-0a896ea93c86" />
 
           <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem", textAlign: "left" }}>
             <label htmlFor="name" style={{ color: "var(--text-muted)", fontSize: "0.9rem", fontFamily: "var(--font-mono)" }}>Name</label>
