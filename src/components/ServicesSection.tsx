@@ -10,28 +10,28 @@ interface ServiceItem {
 const servicesData: ServiceItem[] = [
   {
     number: '01',
-    name: '3D Modeling',
-    description: 'Creation of detailed objects, characters, or environments tailored to specific client needs, ideal for games, products, and visualizations.'
+    name: '3D Web Development',
+    description: 'Building interactive 3D web applications, WebGL visualizers, and dynamic canvas experiences using React, Three.js, and GSAP.'
   },
   {
     number: '02',
-    name: 'Rendering',
-    description: 'High-quality, photorealistic renders that showcase designs with custom lighting, textures, and materials to bring concepts to life.'
+    name: 'Full Stack Engineering',
+    description: 'End-to-end web applications built with modern frontend frameworks, scalable API architectures, and robust backend systems.'
   },
   {
     number: '03',
-    name: 'Motion Design',
-    description: 'Dynamic animations and motion graphics that add energy and storytelling to brands, products, and digital experiences.'
+    name: 'UI/UX & Motion Design',
+    description: 'Crafting polished, accessible interfaces with fluid micro-interactions and animations that elevate digital brand storytelling.'
   },
   {
     number: '04',
-    name: 'Branding',
-    description: 'Crafting cohesive visual identities -- from logos to full brand systems -- that communicate a clear and memorable presence.'
+    name: 'Frontend Architecture',
+    description: 'Designing high-performance, maintainable frontend codebases leveraging React 19, TypeScript, Tailwind CSS, and Framer Motion.'
   },
   {
     number: '05',
-    name: 'Web Design',
-    description: 'Designing clean, modern, and conversion-focused websites with attention to layout, typography, and user experience.'
+    name: 'Branding & Visual Identity',
+    description: 'Developing cohesive visual presence -- from design tokens and assets to high-converting interactive landing pages.'
   }
 ];
 
