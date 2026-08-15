@@ -14,50 +14,50 @@ export interface ProjectRepo {
 const HUSSNAIN_REPOS: ProjectRepo[] = [
   {
     id: 1,
-    category: "3D Portfolio",
-    title: "My-Portfolio",
-    desc: "Interactive 3D developer portfolio landing page with Framer Motion and custom WebGL elements.",
-    stack: ["React", "TypeScript", "Tailwind CSS", "GSAP"],
+    category: "Academic & University Project",
+    title: "Air University Course Portal",
+    desc: "Interactive academic portal for course registration, grade calculations, and student performance tracking.",
+    stack: ["React", "Java", "Spring Boot", "SQL"],
     link: "https://github.com/hussnainahmedd/My-POrtfolio"
   },
   {
     id: 2,
-    category: "Full Stack",
-    title: "Vercel Web Experience",
-    desc: "Modern responsive web applications deployed on Vercel with high performance.",
-    stack: ["React", "Next.js", "Node.js"],
+    category: "Personal & Web3D",
+    title: "3D Developer Portfolio",
+    desc: "Interactive 3D web experience with 3D model viewports, particle physics, and fluid scroll animations.",
+    stack: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
     link: "https://hussnainportfolio.vercel.app/"
   },
   {
     id: 3,
-    category: "Android & Java",
-    title: "Android Application Systems",
-    desc: "Native Android applications featuring clean architecture and modern material UI.",
-    stack: ["Android", "Java", "Kotlin"],
+    category: "Mobile Application",
+    title: "Android Attendance & Student App",
+    desc: "Native Android application for student portals, automated attendance logging, and timetable notifications.",
+    stack: ["Android", "Kotlin", "Firebase", "REST API"],
     link: "https://github.com/hussnainahmedd"
   },
   {
     id: 4,
-    category: "Database & Backend",
-    title: "Firebase & Node Services",
-    desc: "Real-time backend data storage and user authentication microservices.",
-    stack: ["Node.js", "Express", "Firebase", "MongoDB"],
+    category: "Data Science & AI",
+    title: "AI Computer Vision & Data Pipeline",
+    desc: "Automated image classification system and predictive data analysis engine built with Python.",
+    stack: ["Python", "OpenCV", "TensorFlow", "NumPy"],
     link: "https://github.com/hussnainahmedd"
   },
   {
     id: 5,
-    category: "Algorithms",
-    title: "Data Structures & OOP",
-    desc: "High-performance object-oriented programming implementations in C++ and Java.",
-    stack: ["C++", "Java", "Algorithms"],
+    category: "Full Stack Software",
+    title: "Realtime WebSocket Chat System",
+    desc: "Multi-user instant messaging platform featuring end-to-end WebSockets, room management, and dark UI.",
+    stack: ["Node.js", "Express", "MongoDB", "WebSockets"],
     link: "https://github.com/hussnainahmedd"
   },
   {
     id: 6,
-    category: "Frontend UI",
-    title: "Glassmorphic Component Suite",
-    desc: "Reusable React glassmorphic design system components with fluid animations.",
-    stack: ["React", "Tailwind CSS", "Figma"],
+    category: "Web Application",
+    title: "Fullstack E-Commerce Platform",
+    desc: "Conversion-focused online storefront with interactive shopping cart, checkout logic, and admin panel.",
+    stack: ["React", "Tailwind CSS", "Node.js", "SQL"],
     link: "https://github.com/hussnainahmedd"
   }
 ];
@@ -197,7 +197,7 @@ export const Carousel3DSection: React.FC = () => {
             className="hero-heading font-black uppercase text-center leading-none tracking-tight"
             style={{ fontSize: 'clamp(2.5rem, 8vw, 100px)' }}
           >
-            Featured Repositories
+            Featured BSCS Projects
           </h2>
         </FadeIn>
       </div>

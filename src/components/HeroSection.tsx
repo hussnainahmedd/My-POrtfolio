@@ -117,10 +117,10 @@ export const HeroSection: React.FC = () => {
       <div className="flex justify-between items-end px-6 md:px-10 pb-7 sm:pb-8 md:pb-10 w-full z-20">
         <FadeIn delay={0.35} y={20}>
           <p
-            className="text-[#D7E2EA] font-light uppercase tracking-wide leading-snug max-w-[160px] sm:max-w-[220px] md:max-w-[280px]"
+            className="text-[#D7E2EA] font-light uppercase tracking-wide leading-snug max-w-[170px] sm:max-w-[240px] md:max-w-[300px]"
             style={{ fontSize: 'clamp(0.75rem, 1.4vw, 1.5rem)' }}
           >
-            a creative developer driven by crafting striking, interactive and unforgettable digital experiences
+            Air University BSCS Student & Creative Developer crafting striking interactive web applications
           </p>
         </FadeIn>
 
