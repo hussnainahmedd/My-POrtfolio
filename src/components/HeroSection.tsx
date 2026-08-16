@@ -41,7 +41,7 @@ export const HeroSection: React.FC = () => {
             </a>
             <a
               href="#contact"
-              onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}
+              onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}
               className="text-[#D7E2EA] font-medium uppercase tracking-wider text-sm md:text-lg lg:text-[1.4rem] transition-opacity duration-200 hover:opacity-70"
             >
               Contact
@@ -87,16 +87,19 @@ export const HeroSection: React.FC = () => {
         </nav>
       </FadeIn>
 
-      {/* Hero Heading */}
-      <div className="w-full overflow-hidden text-center z-0">
+      {/* Hero Heading (Perfectly scaled so "HI, I'M HUSSNAIN" fits on all screens) */}
+      <div className="w-full overflow-hidden text-center z-0 px-2 sm:px-4">
         <FadeIn delay={0.15} y={40}>
-          <h1 className="hero-heading font-black uppercase tracking-tight leading-none whitespace-nowrap w-full text-[14vw] sm:text-[15vw] md:text-[16vw] lg:text-[17.5vw] mt-6 sm:mt-4 md:-mt-5 select-none">
+          <h1
+            className="hero-heading font-black uppercase tracking-tight leading-none whitespace-nowrap w-full mt-4 sm:mt-2 md:-mt-2 select-none"
+            style={{ fontSize: 'clamp(1.8rem, 8.8vw, 11rem)' }}
+          >
             Hi, i&apos;m hussnain
           </h1>
         </FadeIn>
       </div>
 
-      {/* Hero Portrait (Centered Absolutely with Hussnain's actual photo) */}
+      {/* Hero Portrait (Centered Absolutely with Hussnain's photo) */}
       <div className="absolute left-1/2 -translate-x-1/2 z-10 top-1/2 -translate-y-1/2 sm:top-auto sm:translate-y-0 sm:bottom-0 pointer-events-auto">
         <FadeIn delay={0.6} y={30}>
           <Magnet
@@ -108,7 +111,7 @@ export const HeroSection: React.FC = () => {
             <img
               src={hussnainPhoto}
               alt="Hussnain Ahmad"
-              className="w-[260px] sm:w-[320px] md:w-[380px] lg:w-[440px] aspect-square object-cover rounded-full border-4 border-[#BBCCD7]/40 drop-shadow-2xl select-none pointer-events-none"
+              className="w-[240px] sm:w-[300px] md:w-[360px] lg:w-[420px] aspect-square object-cover rounded-full border-4 border-[#BBCCD7]/40 drop-shadow-2xl select-none pointer-events-none"
             />
           </Magnet>
         </FadeIn>
