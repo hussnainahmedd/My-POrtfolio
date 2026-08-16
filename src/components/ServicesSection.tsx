@@ -10,28 +10,28 @@ interface ServiceItem {
 const servicesData: ServiceItem[] = [
   {
     number: '01',
-    name: '3D Modeling',
-    description: 'Creation of detailed objects, characters, or environments tailored to specific client needs, ideal for games, products, and visualizations.'
+    name: 'Full Stack & Node.js Web Apps',
+    description: 'Building secure web applications with Node.js, Express, MongoDB, JWT authentication, and responsive frontend interfaces.'
   },
   {
     number: '02',
-    name: 'Rendering',
-    description: 'High-quality, photorealistic renders that showcase designs with custom lighting, textures, and materials to bring concepts to life.'
+    name: 'Android Mobile Development',
+    description: 'Developing native Android apps with Java/Kotlin, Firebase Realtime Database, user authentication, and MVP clean architecture.'
   },
   {
     number: '03',
-    name: 'Motion Design',
-    description: 'Dynamic animations and motion graphics that add energy and storytelling to brands, products, and digital experiences.'
+    name: 'E-Commerce & WooCommerce',
+    description: 'Crafting custom eCommerce stores using WordPress, WooCommerce, custom payment gateways (Stripe), product catalog, and checkout systems.'
   },
   {
     number: '04',
-    name: 'Branding',
-    description: 'Crafting cohesive visual identities -- from logos to full brand systems -- that communicate a clear and memorable presence.'
+    name: 'Data Structures & Algorithms',
+    description: 'Implementing graph traversal algorithms, node-edge data structures, and efficient object-oriented software engineering solutions in Java & C++.'
   },
   {
     number: '05',
-    name: 'Web Design',
-    description: 'Designing clean, modern, and conversion-focused websites with attention to layout, typography, and user experience.'
+    name: 'Agile & Software Engineering',
+    description: 'Applying Scrum, Kanban, MVP development methodologies, and data science analytics for end-to-end software product delivery.'
   }
 ];
 

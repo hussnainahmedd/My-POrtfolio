@@ -106,7 +106,7 @@ export const HeroSection: React.FC = () => {
           >
             <img
               src="https://shrug-person-78902957.figma.site/_components/v2/d24c01ad3a56fc65e942a1f501eb73db42d7cf9a/Rectangle_40443.81459862.png"
-              alt="Hussnain Ahmed Portrait"
+              alt="Hussnain Ahmad Portrait"
               className="w-[280px] sm:w-[360px] md:w-[440px] lg:w-[520px] object-contain drop-shadow-2xl select-none pointer-events-none"
             />
           </Magnet>
@@ -117,10 +117,10 @@ export const HeroSection: React.FC = () => {
       <div className="flex justify-between items-end px-6 md:px-10 pb-7 sm:pb-8 md:pb-10 w-full z-20">
         <FadeIn delay={0.35} y={20}>
           <p
-            className="text-[#D7E2EA] font-light uppercase tracking-wide leading-snug max-w-[160px] sm:max-w-[220px] md:max-w-[280px]"
+            className="text-[#D7E2EA] font-light uppercase tracking-wide leading-snug max-w-[170px] sm:max-w-[240px] md:max-w-[300px]"
             style={{ fontSize: 'clamp(0.75rem, 1.4vw, 1.5rem)' }}
           >
-            a creative developer & bscs student at air university driven by crafting striking and unforgettable projects
+            a bscs student at air university & full stack developer driven by crafting striking web & mobile projects
           </p>
         </FadeIn>
 
