@@ -3,6 +3,7 @@ import MarqueeSection from './components/MarqueeSection';
 import AboutSection from './components/AboutSection';
 import ServicesSection from './components/ServicesSection';
 import ProjectsSection from './components/ProjectsSection';
+import ContactSection from './components/ContactSection';
 
 export function App() {
   return (
@@ -21,6 +22,9 @@ export function App() {
 
       {/* 5. Projects Section */}
       <ProjectsSection />
+
+      {/* 6. Contact Section */}
+      <ContactSection />
     </main>
   );
 }
