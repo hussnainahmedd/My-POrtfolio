@@ -2,6 +2,7 @@ import React from 'react';
 import FadeIn from './FadeIn';
 import Magnet from './Magnet';
 import ContactButton from './ContactButton';
+import hussnainPhoto from '../assets/hussnain.jpg';
 
 export const HeroSection: React.FC = () => {
   const scrollToSection = (id: string) => {
@@ -95,7 +96,7 @@ export const HeroSection: React.FC = () => {
         </FadeIn>
       </div>
 
-      {/* Hero Portrait (Centered Absolutely) */}
+      {/* Hero Portrait (Centered Absolutely with Hussnain's actual photo) */}
       <div className="absolute left-1/2 -translate-x-1/2 z-10 top-1/2 -translate-y-1/2 sm:top-auto sm:translate-y-0 sm:bottom-0 pointer-events-auto">
         <FadeIn delay={0.6} y={30}>
           <Magnet
@@ -105,9 +106,9 @@ export const HeroSection: React.FC = () => {
             inactiveTransition="transform 0.6s ease-in-out"
           >
             <img
-              src="https://shrug-person-78902957.figma.site/_components/v2/d24c01ad3a56fc65e942a1f501eb73db42d7cf9a/Rectangle_40443.81459862.png"
-              alt="Hussnain Ahmad Portrait"
-              className="w-[280px] sm:w-[360px] md:w-[440px] lg:w-[520px] object-contain drop-shadow-2xl select-none pointer-events-none"
+              src={hussnainPhoto}
+              alt="Hussnain Ahmad"
+              className="w-[260px] sm:w-[320px] md:w-[380px] lg:w-[440px] aspect-square object-cover rounded-full border-4 border-[#BBCCD7]/40 drop-shadow-2xl select-none pointer-events-none"
             />
           </Magnet>
         </FadeIn>
