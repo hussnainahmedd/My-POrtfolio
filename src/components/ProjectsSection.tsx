@@ -3,7 +3,11 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import FadeIn from './FadeIn';
 import LiveProjectButton from './LiveProjectButton';
 
-// Import generated project images
+// Import project images
+import zevqynMain from '../assets/projects/zevqyn_main.jpg';
+import zevqynCol1 from '../assets/projects/zevqyn_col1.jpg';
+import zevqynCol2 from '../assets/projects/zevqyn_col2.jpg';
+
 import codeQualityMain from '../assets/projects/code_quality_main.jpg';
 import codeQualityCol1 from '../assets/projects/code_quality_col1.jpg';
 import codeQualityCol2 from '../assets/projects/code_quality_col2.jpg';
@@ -35,60 +39,89 @@ interface ProjectCardData {
   col1Img1: string;
   col1Img2: string;
   col2Img: string;
+  tags?: string[];
+  description?: string;
 }
 
 const projectsData: ProjectCardData[] = [
   {
     number: '01',
+    name: 'ZEVQYN',
+    category: 'AI Research + Career Workspace',
+    description: 'An AI-powered research and career workspace that transforms research into projects, resumes, portfolios, and actionable career growth using RAG and generative AI.',
+    url: 'https://zevqyn.free.je/',
+    githubUrl: 'https://github.com/hussnainahmedd/zevqyn',
+    tags: ['FastAPI', 'Python', 'Supabase', 'pgvector', 'Gemini RAG', 'WordPress'],
+    col1Img1: zevqynCol1,
+    col1Img2: zevqynCol2,
+    col2Img: zevqynMain
+  },
+  {
+    number: '02',
     name: 'Code Quality Dashboard',
     category: 'Full Stack & AST Analytics',
+    description: 'A full-stack application to instantly analyze your codebase complexity and maintainability.',
     url: 'https://code-quality-dashboard-topaz.vercel.app/',
     githubUrl: 'https://github.com/hussnainahmedd/code-quality-dashboard',
+    tags: ['React', 'TypeScript', 'Node.js', 'AST Parser', 'Tailwind'],
     col1Img1: codeQualityCol1,
     col1Img2: codeQualityCol2,
     col2Img: codeQualityMain
   },
   {
-    number: '02',
+    number: '03',
     name: 'Tour Splitter -- Expense App',
     category: 'Android & Firebase',
+    description: 'Firebase-based Android app for managing and splitting group tour expenses with real-time sync.',
     url: 'https://github.com/hussnainahmedd',
+    githubUrl: 'https://github.com/hussnainahmedd',
+    tags: ['Android', 'Java/Kotlin', 'Firebase', 'MVP Architecture'],
     col1Img1: tourCol1,
     col1Img2: tourCol2,
     col2Img: tourMain
   },
   {
-    number: '03',
+    number: '04',
     name: 'Stock Management System',
     category: 'Node.js & MongoDB',
+    description: 'Secure stock management web application with JWT authentication for inventory control.',
     url: 'https://github.com/hussnainahmedd/My-POrtfolio',
+    githubUrl: 'https://github.com/hussnainahmedd/My-POrtfolio',
+    tags: ['Node.js', 'Express', 'MongoDB', 'JWT Auth'],
     col1Img1: stockCol1,
     col1Img2: stockCol2,
     col2Img: stockMain
   },
   {
-    number: '04',
+    number: '05',
     name: 'HAstore E-Commerce Platform',
     category: 'WordPress & Stripe',
+    description: 'Full-featured WooCommerce e-commerce platform with Stripe payment gateway integration.',
     url: 'https://hussnainportfolio.vercel.app/',
+    tags: ['WordPress', 'WooCommerce', 'Stripe', 'PHP'],
     col1Img1: hastoreCol1,
     col1Img2: hastoreCol2,
     col2Img: hastoreMain
   },
   {
-    number: '05',
+    number: '06',
     name: 'Crime Network Analyzer',
     category: 'Java & Graph Algorithms',
+    description: 'Graph-based Java application to analyze complex relationships and connections in crime datasets.',
     url: 'https://github.com/hussnainahmedd',
+    githubUrl: 'https://github.com/hussnainahmedd',
+    tags: ['Java', 'Data Structures', 'Graphs', 'Algorithms'],
     col1Img1: crimeCol1,
     col1Img2: crimeCol2,
     col2Img: crimeMain
   },
   {
-    number: '06',
-    name: 'Agile Analytics & AUCIS Suite',
+    number: '07',
+    name: 'Agile Analytics Suite',
     category: 'Scrum & Data Science',
+    description: 'Project management & data analytics platform built for Agile Scrum & Kanban workflows.',
     url: 'https://github.com/hussnainahmedd/My-POrtfolio',
+    tags: ['Agile', 'Scrum', 'Data Science', 'HP LIFE Certified'],
     col1Img1: stockCol1,
     col1Img2: crimeCol1,
     col2Img: agileMain
@@ -106,14 +139,14 @@ const ProjectCard: React.FC<{
     offset: ['start end', 'start start']
   });
 
-  const targetScale = 1 - (totalCards - 1 - index) * 0.02;
+  const targetScale = 1 - (totalCards - 1 - index) * 0.018;
   const scale = useTransform(scrollYProgress, [0, 1], [1, targetScale]);
 
   return (
     <div
       ref={containerRef}
       className="h-[88vh] flex items-center justify-center sticky top-20 md:top-28 w-full"
-      style={{ top: `calc(75px + ${index * 22}px)` }}
+      style={{ top: `calc(75px + ${index * 20}px)` }}
     >
       <motion.div
         style={{ scale }}
@@ -149,12 +182,33 @@ const ProjectCard: React.FC<{
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
                   <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
                 </svg>
-                GitHub Repo
+                Frontend Code
               </a>
             )}
             <LiveProjectButton url={project.url} />
           </div>
         </div>
+
+        {/* Description & Tags Row */}
+        {project.description && (
+          <div className="flex flex-col gap-2">
+            <p className="text-xs sm:text-sm text-[#D7E2EA]/80 font-light leading-relaxed max-w-4xl">
+              {project.description}
+            </p>
+            {project.tags && (
+              <div className="flex items-center gap-2 flex-wrap pt-1">
+                {project.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-2.5 py-1 rounded-full bg-[#D7E2EA]/10 text-[#BBCCD7] text-[10px] sm:text-xs uppercase tracking-wider font-semibold border border-[#D7E2EA]/15"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
 
         {/* Bottom Image Grid Row */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-4 w-full flex-grow items-center">
@@ -164,13 +218,13 @@ const ProjectCard: React.FC<{
               src={project.col1Img1}
               alt={`${project.name} screenshot 1`}
               className="w-full rounded-[30px] sm:rounded-[40px] md:rounded-[50px] object-cover border border-[#D7E2EA]/20"
-              style={{ height: 'clamp(120px, 15vw, 210px)' }}
+              style={{ height: 'clamp(110px, 14vw, 190px)' }}
             />
             <img
               src={project.col1Img2}
               alt={`${project.name} screenshot 2`}
               className="w-full rounded-[30px] sm:rounded-[40px] md:rounded-[50px] object-cover border border-[#D7E2EA]/20"
-              style={{ height: 'clamp(140px, 19vw, 300px)' }}
+              style={{ height: 'clamp(130px, 17vw, 260px)' }}
             />
           </div>
 
@@ -179,7 +233,7 @@ const ProjectCard: React.FC<{
             <img
               src={project.col2Img}
               alt={`${project.name} main mockup`}
-              className="w-full h-full min-h-[280px] md:min-h-[400px] rounded-[30px] sm:rounded-[40px] md:rounded-[50px] object-cover border border-[#D7E2EA]/20"
+              className="w-full h-full min-h-[260px] md:min-h-[380px] rounded-[30px] sm:rounded-[40px] md:rounded-[50px] object-cover border border-[#D7E2EA]/20"
             />
           </div>
         </div>
